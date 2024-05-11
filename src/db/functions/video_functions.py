@@ -39,12 +39,20 @@ def store_video(file, title):
         if not os.path.exists(upload_dir):
             os.makedirs(upload_dir)
 
-        file_path = os.path.join(upload_dir, title, file.filename)
+        # sanitized_title = title.replace(" ", "_")
+        title_dir = os.path.join(upload_dir, title)
+
+        # Create the subdirectory if it doesn't exist
+        if not os.path.exists(title_dir):
+            os.makedirs(title_dir)
+
+        # Construct the file path within the subdirectory
+        file_path = os.path.join(title_dir, file.filename)
         with open(file_path, "wb") as video_file:
             # Iterate over the file chunks and write them to the new file
             shutil.copyfileobj(file.file, video_file)
 
-        thumbnail_path = os.path.join(upload_dir, "thumbnail_" + file.filename + ".jpg")
+        thumbnail_path = os.path.join(title_dir, "thumbnail_" + file.filename + ".jpg")
 
         # Create thumbnail
         create_thumbnail(video_path=file_path, thumbnail_path=thumbnail_path)

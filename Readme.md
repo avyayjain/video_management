@@ -44,17 +44,21 @@ docker run -d -p 8000:8000 video_manegement
 # Testing
 ### 1. now you can go to the postman the collection by visiting this url 
 ```bash
-https://www.postman.com/technical-saganist-64650375/workspace/projects/collection/23939640-60350063-a735-4dd8-b45c-aa41ff4d3762?action=share&creator=23939640
+https://www.postman.com/technical-saganist-64650375/workspace/projects/collection/23939640-e40ae493-90df-4a04-afe0-04e326b16cd6?action=share&creator=23939640
 ```
-### 2. you can import the collection in the postman and test the api's
-### 3. you can also go to the swagger documentation by going to the following url
+
+### 2. you can also go to the swagger documentation by going to the following url
 ```bash
 http://localhost:8000/docs
 ```
-### 4. you can also test some api by the command
+### 3. you can also test some api by the command
 ```bash
 pytest -v
 ```
+### 4. for api documentation you can go to the postman collection documentation for endpoins and response
+
+
+## Technologies Used
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)

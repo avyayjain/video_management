@@ -27,7 +27,7 @@ class TestSignUp(TestCase):
         sign_up = self.app.post(
             f"/user/sign-up/",
             json={
-                "email": "avyay4@gmail.com",
+                "email": "avyay2@gmail.com",
                 "password": "avyay123",
                 "name": "avyay"
             }
