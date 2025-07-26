@@ -1,4 +1,4 @@
-# This is Todo application system 
+# This is video management application system 
 
 ## Installation
 ### 1. Clone the repository
